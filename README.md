@@ -67,3 +67,25 @@ nikto -h http://192.168.0.132:4173
 
 ➡️ 定位：手動 / 半自動攻擊階段 → 深入分析、嘗試繞過安全檢查。
 
+🔹 如何在 Kali 測試
+
+用 curl 發送測試請求
+
+curl -X POST http://192.168.0.132:8000/api/login \
+     -H "Content-Type: application/json" \
+     -d '{"username":"admin","password":"admin"}'
+
+
+用 Burp Suite / OWASP ZAP
+
+攔截請求
+
+修改 payload
+
+觀察伺服器回應
+
+自動化測試工具
+
+sqlmap：專門測試 SQL Injection
+
+sqlmap -u "http://192.168.0.132:8000/api/login" --data="username=admin&password=123"
