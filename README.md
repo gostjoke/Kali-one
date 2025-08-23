@@ -89,3 +89,20 @@ curl -X POST http://192.168.0.132:8000/api/login \
 sqlmap：專門測試 SQL Injection
 
 sqlmap -u "http://192.168.0.132:8000/api/login" --data="username=admin&password=123"
+
+-------------------
+版本探測 (安全一點的方式)
+
+nmap -sV -p 80,443 www.desmos.com
+
+
+→ 可以顯示 Web 伺服器的版本（例如 Nginx/Apache/CloudFront）。
+
+SSL/TLS 設定探測
+
+nmap --script ssl-enum-ciphers -p 443 www.desmos.com
+
+
+→ 可以列出 HTTPS 的加密協議，檢查安全性（例如是否支援 TLS 1.0/1.1）。
+
+如果只是練習，可以對自己控制的伺服器跑更多深入掃描，例如 -A（OS 探測 + 版本 + traceroute + script）。
