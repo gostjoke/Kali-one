@@ -117,3 +117,10 @@ nmap --script ssl-enum-ciphers -p 443 www.desmos.com
 → 可以列出 HTTPS 的加密協議，檢查安全性（例如是否支援 TLS 1.0/1.1）。
 
 如果只是練習，可以對自己控制的伺服器跑更多深入掃描，例如 -A（OS 探測 + 版本 + traceroute + script）。
+
+🔹 偵測路徑
+
+dirb http://192.168.0.132:8000
+
+ffuf -u http://192.168.0.132:8000/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+
