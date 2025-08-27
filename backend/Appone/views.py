@@ -3,6 +3,10 @@ from django.core.cache import cache
 from .models import ExampleModel
 import datetime 
 
+def grade(score, breakpoints=[60, 70, 80, 90], grades=['F', 'D', 'C', 'B', 'A']):
+    return grades[score]
+
+
 def home(request):
     data = cache.get("examplemodeldata")
 
