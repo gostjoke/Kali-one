@@ -147,7 +147,7 @@ sudo hping3 -S --flood -V -p 8000 192.168.0.132
 
 DVWA Agent -> account:admin password:password \n
 
-文件上傳攻擊 Upload attack
+🔹 文件上傳攻擊 Upload attack
 
 在 Kali Linux 裡，Weevely 是一個常見的 webshell 工具，用來建立後門、遠端控制網站伺服器。
 
