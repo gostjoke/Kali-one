@@ -1,4 +1,5 @@
 # Kali-one
+https://explainshell.com/
 
 # ping with windows
 ping 8.8.8.8 -c 4  
