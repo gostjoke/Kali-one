@@ -120,14 +120,20 @@ nmap --script ssl-enum-ciphers -p 443 www.desmos.com
 
 如果只是練習，可以對自己控制的伺服器跑更多深入掃描，例如 -A（OS 探測 + 版本 + traceroute + script）。
 
+-------------------
+
 🔹 偵測路徑
 
+dirb 較常使用
 dirb http://192.168.0.132:8000
+
 
 ffuf -u http://192.168.0.132:8000/FUZZ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 
 ASP.NET 系統常有 .aspx, .asp, .bak, .config：
 ffuf -u http://ip:port/FUZZ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e .aspx,.asp,.bak,.config -fc 404
+
+-------------------
 
 🔹 DDOS Test
 
