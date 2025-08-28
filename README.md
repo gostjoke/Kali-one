@@ -1,5 +1,6 @@
 # Kali-one
 https://explainshell.com/
+https://www.mediacollege.com/linux/command/linux-command.html
 
 # ping with windows
 ping 8.8.8.8 -c 4  
